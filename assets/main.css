@@ -1,0 +1,26 @@
+.theme--light.application {
+    color: #fff !important;
+    background: transparent !important;
+}
+
+#bg {
+    background-image: linear-gradient(to left bottom, #053733, #00624c, #009054, #00be49, #42eb12) !important;
+    clip-path: polygon(60% 49%, 100% 0, 100% 100%, 0 100%, 0 64%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.my-border {
+    border-radius: 8px 8px 8px 8px !important;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 0px solid #000000 !important;
+}
+
+.my-shadow {
+    -webkit-box-shadow: 3px 3px 9px 0px rgba(5,55,51,0.34);
+    -moz-box-shadow: 3px 3px 9px 0px rgba(5,55,51,0.34);
+    box-shadow: 3px 3px 9px 0px rgba(5,55,51,0.34) !important;
+}
