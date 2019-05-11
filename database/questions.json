@@ -1,0 +1,123 @@
+[
+    {
+        "_id": 1,
+        "question": "The language spoken by the people by Pakistan is?",
+        "options": {
+            "A": "Hindi",
+            "B": "Palauan",
+            "C": "Sindhi",
+            "D": "Nauruan"
+        },
+        "answer": "C" 
+    },
+    {
+        "_id": 2,
+        "question": "The World Largest desert is ?",
+        "options": {
+            "A": "Thar",
+            "B": "Kalahari",
+            "C": "Sahara",
+            "D": "Sonoran"
+        },
+        "answer": "C" 
+    },
+    {
+        "_id": 3,
+        "question": "Country that has the highest in Barley Production?",
+        "options": {
+            "A": "China",
+            "B": "India",
+            "C": "France",
+            "D": "Russia"
+        },
+        "answer": "D" 
+    },
+    {
+        "_id": 4,
+        "question": "The metal whose salts are sensitive to light is?",
+        "options": {
+            "A": "Zinc",
+            "B": "Silver",
+            "C": "Copper",
+            "D": "Aluminium"
+        },
+        "answer": "B" 
+    },
+    {
+        "_id": 5,
+        "question": "The Central Rice Research Station is situated in?",
+        "options": {
+            "A": "Cuttack",
+            "B": "Chennai",
+            "C": "Bangalore",
+            "D": "Quilon"
+        },
+        "answer": "A" 
+    },
+    {
+        "_id": 6,
+        "question": "The largest river in India is ?",
+        "options": {
+            "A": "Yamuna",
+            "B": "Bramaputra",
+            "C": "Kaveri",
+            "D": "Ganga"
+        },
+        "answer": "D" 
+    },
+    {
+        "_id": 7,
+        "question": "Country that was called as Land of Rising Sun?",
+        "options": {
+            "A": "Russia",
+            "B": "Japan",
+            "C": "Korea",
+            "D": "Holland"
+        },
+        "answer": "B" 
+    },
+    {
+        "_id": 8,
+        "question": "The gas used for making vegetables is?",
+        "options": {
+            "A": "Oxygen",
+            "B": "Carbon dioxide",
+            "C": "Hydrogen",
+            "D": "Nitrogen"
+        },
+        "answer": "C" 
+    },
+    {
+        "_id": 9,
+        "question": "Headquarters of UNO are situated at?",
+        "options": {
+            "A": "New York, USA",
+            "B": "Hague (Netherlands)",
+            "C": "Geneva",
+            "D": "Paris"
+        },
+        "answer": "A" 
+    },
+    {
+        "_id": 10,
+        "question": "Fathometer is used to measure?",
+        "options": {
+            "A": "Earthquakes",
+            "B": "Rainfall",
+            "C": "Ocean depth",
+            "D": "Sound intensity"
+        },
+        "answer": "C" 
+    },
+    {
+        "_id": 11,
+        "question": "Durand Cup is associated with the game of?",
+        "options": {
+            "A": "Cricket",
+            "B": "Football",
+            "C": "Hockey",
+            "D": "Volleyball"
+        },
+        "answer": "B" 
+    }
+]
