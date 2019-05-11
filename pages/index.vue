@@ -1,14 +1,10 @@
 <template>
 <v-layout row align-center justify-center>
-    <quiz v-if="start">
-        <v-btn @click="startQuiz" color="primary" class="text-capitalize">
-            Take Quiz
-            <v-icon right>question_answer</v-icon>
-        </v-btn>
-    </quiz>
+    <quiz v-if="start" :items="items"></quiz>
 
-    <questions v-if="quiz">
-    </questions>
+    <questions v-if="quiz"></questions>
+
+    <result v-if="result"></result>
 
 </v-layout>
 </template>
@@ -16,35 +12,40 @@
 <script>
 import Quiz from '@/components/form'
 import Questions from '@/components/quiz'
+import Result from '@/components/result'
 
 export default {
-    data: () => ({
-        formData: {
-            full_name: '',
-            email: '',
-            phone: '',
-            country: '',
-            username: '',
-            password: '',
-            password_confirmation: ''
-        },
-        start: true,
-        quiz: false
-    }),
     computed: {
         items() {
-            return Array.from(Array(10).keys(), n => n + 1)
+            return Array.from(Array(this.quizLength).keys(), n => n + 1)
+        },
+        start() {
+            return this.$store.state.start
+        },
+        quiz() {
+            return this.$store.state.quiz
+        },
+        result() {
+            return this.$store.state.result
         }
     },
-    created() {},
+    async asyncData({ app }) {
+        const { data } = await app.$api.getTotalQuizLength()
+        return { quizLength: data.data }
+    },
     components: {
         Quiz,
-        Questions
+        Questions,
+        Result
     },
     methods: {
-        startQuiz() {
-            this.start = !this.start
+        submitQuiz() {
             this.quiz = !this.quiz
+            this.result = !this.result
+        },
+        takeAnotherQuiz() {
+            this.start = !this.start
+            this.result = !this.result
         }
     }
 }

@@ -41,7 +41,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+    '@/plugins/api'
   ],
 
   /*
@@ -56,6 +57,7 @@ export default {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'http://0.0.0.0:5000/api/'
   },
 
   /*
@@ -73,6 +75,7 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      config.node = { fs: 'empty', net: 'empty' }
     }
   }
 }
