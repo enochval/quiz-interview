@@ -42,7 +42,8 @@ export default {
   */
   plugins: [
     '@/plugins/vuetify',
-    '@/plugins/api'
+    '@/plugins/api',
+    { src: '~/plugins/localStorage.js', ssr: false }
   ],
 
   /*

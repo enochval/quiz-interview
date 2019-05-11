@@ -51,13 +51,19 @@ export default {
 
         }
     }),
+    created() {
+        const { fullName, email, phone } = this.$store.state.requestBody
+        this.formData.fullName = fullName ? fullName : '',
+        this.formData.email = email ? email : ''
+        this.formData.phone = phone ? phone : ''
+    },
     methods: {
         async startQuiz() {
             if (this.$refs.form.validate()) {
                 const {noOfQuestions} = this.formData
                 await this.$store.dispatch('getQuiz', noOfQuestions)
                 this.$store.commit('showQuiz')
-                this.$store.commit('setUser', this.formData)
+                this.$store.commit('setRequestBody', this.formData)
             }
         }
     }

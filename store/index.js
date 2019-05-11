@@ -1,7 +1,9 @@
-import { submitQuiz } from "../../backend/controllers/AppController";
-
 export const state = () => ({
-    requestBody: {},
+    requestBody: {
+        fullName: '',
+        email: '',
+        phone: ''
+    },
     start: true,
     quiz: false,
     result: false,
@@ -10,8 +12,8 @@ export const state = () => ({
 })
   
 export const mutations = {
-    setUser (state, payload) {
-        state.requestBody = payload
+    setRequestBody (state, payload) {
+        Object.assign(state.requestBody, payload)
     },
     setQuizQuestions (state, payload) {
         state.quizQuestions = payload
@@ -27,10 +29,15 @@ export const mutations = {
         state.quiz = !state.quiz
         state.result = !state.result
     },
+    takeAnotherQuiz(state) {
+        state.start = !state.start
+        state.result = !state.result
+    },
     setScore(state, payload) {
         state.score = payload
-        state.requestBody = {}
+        state.requestBody.answersProvided = false
         state.quizQuestions = []
+        state.requestBody.noOfQuestions = 5
     }
 }
 
