@@ -1,1 +1,1 @@
-web: node --exec babel-node --presets es2015 index.js
+web: node index.js
