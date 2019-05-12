@@ -15,6 +15,7 @@ app.use(cors())
 
 app.use('/api', routes)
 
-var server = app.listen(port, () => {
-    console.log(`Listening on port ${server.address().port}`);
-});
+// var server = app.listen(port, () => {
+//     console.log(`Listening on port ${server.address().port}`);
+// });
+module.exports = app
