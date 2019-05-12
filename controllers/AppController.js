@@ -71,7 +71,7 @@ const storeAnser = async (answer) => {
 }
 
 export const totalQuizLength = async (req, res) => {
-    const questions = await getData()
+    const questions = await getgetDataData()
     res.json({
         status: true,
         data: questions.length
