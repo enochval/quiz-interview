@@ -58,7 +58,7 @@ export default {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://0.0.0.0:5000/api/'
+    baseURL: 'https://backend-quiz.herokuapp.com/api/'
   },
 
   /*
