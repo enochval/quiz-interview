@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "vue-start": "nuxt start",
+    "generate": "nuxt generate",
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -19,7 +21,9 @@
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
+    "express": "^4.16.4",
     "nodemon": "^1.18.9",
+    "serve-static": "^1.14.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   }
