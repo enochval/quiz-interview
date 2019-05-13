@@ -21,11 +21,11 @@ const submitQuizschema = {
 const getValidationMessage = (errors) => {
     return errors.details.map((error) => error.message)
 }
-const QUESTIONS_DB = 'database/questions.json'
-const ANSWERS_DB = 'database/answers.json'
+const QUESTIONS_DB = path.join(__dirname, '../database/questions.json')
+const ANSWERS_DB = path.join(__dirname, '../database/answers.json')
 
 const getData = async (shuffle = false, limit = false, ids = false, file = QUESTIONS_DB) => {
-    const data = await fs.readFile(path.join(file))
+    const data = await fs.readFile(file)
     const questions = JSON.parse(data)
     if (shuffle && limit) {
         return _.take(_.shuffle(questions), limit)
@@ -67,11 +67,11 @@ const storeAnser = async (answer) => {
     const data = await getData(false, false, false, ANSWERS_DB)
     data.push(answer)
     const json = JSON.stringify(data)
-    await fs.writeFile(path.join(ANSWERS_DB), json)
+    await fs.writeFile(ANSWERS_DB, json)
 }
 
 export const totalQuizLength = async (req, res) => {
-    const questions = await getgetDataData()
+    const questions = await getData()
     res.json({
         status: true,
         data: questions.length
